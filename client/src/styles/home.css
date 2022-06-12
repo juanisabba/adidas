@@ -1,0 +1,195 @@
+.home__promotional-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 5vw;
+  background-color: #007bc6;
+  color: #fff;
+}
+
+.home__portada {
+  width: 100%;
+  height: 38vw;
+  object-fit: cover;
+}
+
+.home__portada-opacity {
+  width: 100%;
+  height: 38vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+}
+
+.home__portada-button {
+  z-index: 100;
+  display: flex;
+  position: absolute;
+  margin-top: calc(-5vw + -60px);
+  margin-left: 3vw;
+  font-size: 18px;
+  height: 60px;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  font-weight: 700;
+  color: #fff;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.home__portada-button:hover {
+  background-color: #000;
+}
+
+.home__clubs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e2dede;
+  padding: 20px;
+  font-size: 8px;
+}
+
+.home__clubs img {
+  width: 80px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.home__history-text {
+  display: flex;
+  padding: 80px 10vw;
+  background-color: #e2dede;
+}
+
+.home__history-text div {
+  padding: 0 20px;
+}
+
+.home__history-text h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.home__history-text p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.home__register-text {
+  display: flex;
+  background-color: #ede734;
+  align-items: flex-start;
+  height: 165px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  bottom: 0;
+  width: 100%;
+}
+
+.home__register-text h1 {
+  width: 50%;
+  text-align: right;
+}
+
+.home__register-text button {
+  font-size: 17px;
+  margin: 12px 0 0 25px;
+  padding: 10px;
+  background-color: #000;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.home__register-text button:hover {
+  color: #7c7c7c;
+}
+
+@media (max-width: 1250px) {
+  .home__portada-button {
+    margin-top: calc(-5vw + -60px);
+    margin-left: 3vw;
+    font-size: 15px;
+    height: 50px;
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 950px) {
+  .home__history-text {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .home__history-text div {
+    padding: 20px 10vw;
+  }
+}
+
+@media (max-width: 750px) {
+  .home__portada {
+    height: 50vw;
+  }
+  
+  .home__portada-opacity {
+    height: 50vw;
+  }
+  
+  .home__register-text {
+    height: 130px;
+  }
+  
+  .home__register-text h1 {
+    font-size: 25px;
+  }
+  
+  .home__register-text button {
+    font-size: 15px;
+    margin-top: 0px;
+  }
+
+  .home__clubs img{
+    width: 60px;
+  }
+}
+
+@media (max-width: 550px) {
+  .home__register-text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    padding: 20px 10px;
+    text-align: center;
+  }
+  
+  .home__register-text h1 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .home__register-text button {
+    font-size: 11px;
+    margin: 0px;
+  }  
+  .home__clubs img{
+    width: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home__portada {
+    height: 60vw;
+  }
+  
+  .home__portada-opacity {
+    height: 60vw;
+  }
+}
