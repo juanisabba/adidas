@@ -27,7 +27,7 @@ const Register = ({setMessage}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://data-adidas.herokuapp.com/api/users";
+      const url = process.env.USERS_URL;
       await axios.post(url, data);
       setMessage("You have created your account successfully")
       navigate("/login");
