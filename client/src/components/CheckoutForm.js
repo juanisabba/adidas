@@ -67,7 +67,7 @@ const CheckoutForm = () => {
 
   const fetchProducts = async () => {
     axios
-      .get(`https://data-adidas.herokuapp.com/api/users/${user[0]._id}`)
+      .get(`${process.env.USERS_URL}/${user[0]._id}`)
       .then((res) => setUserPurchases(res.data[0].purchases));
   };
 
@@ -99,7 +99,7 @@ const CheckoutForm = () => {
       try {
         const purchaseId =
           userPurchases.length === 0 ? 1 : userPurchases[0].id + 1;
-        await axios.put(`https://data-adidas.herokuapp.com/api/users/${user[0]._id}`, {
+        await axios.put(`${process.env.USERS_URL}/${user[0]._id}`, {
           purchases: [
             {
               id: purchaseId,
@@ -118,7 +118,7 @@ const CheckoutForm = () => {
       } catch (error) {}
 
       try {
-        await axios.post("https://data-adidas.herokuapp.com/api/checkout", {
+        await axios.post(process.env.CHECKOUT, {
           id,
           amount: user ? (total * 90).toFixed(2) : total * 100, //cents
         });
