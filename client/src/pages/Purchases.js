@@ -12,7 +12,7 @@ const Purchases = () => {
 
   const fetcPurchases = async () => {
     await axios
-      .get(`https://data-adidas.herokuapp.com/api/users/${user[0]._id}`)
+      .get(`${process.env.USERS_URL}/${user[0]._id}`)
       .then((res) => setPurchases(res.data[0].purchases));
   };
 
