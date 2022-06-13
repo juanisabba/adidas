@@ -40,7 +40,7 @@ const SingleProduct = (props) => {
 
   const fetchProduct = () => {
     axios
-      .get(`https://data-adidas.herokuapp.com/api/products/find/${id}`)
+      .get(`${process.env.PRODUCTS_URL}/find/${id}`)
       .then((res) => {
         setProduct(res.data);
         setStars(res.data.stars)
