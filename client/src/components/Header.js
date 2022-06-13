@@ -38,7 +38,7 @@ const Header = () => {
 
   const fetchProducts = () => {
     axios
-      .get(`https://data-adidas.herokuapp.com/api/products?submenu=${search}`)
+      .get(`${process.env.PRODUCTS_URL}?submenu=${search}`)
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   };
