@@ -7,7 +7,7 @@ import "../styles/payment.css";
 import CheckoutForm from '../components/CheckoutForm'
 
 const stripePromise = loadStripe(
-  "pk_test_51Kz436DI2220fX2RtumW2sUt7bucyWSzFE0n3RVHBso218kqOrADlOxQzY7r2GgM3GMWyPHNiRTvwADx0HUOjUrj00jS73sFOz",{
+  process.env.STRIPE_PASSWORD,{
     locale: 'en'
   }
 );
