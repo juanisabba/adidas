@@ -17,7 +17,7 @@ const SearchPage = (props) => {
   const [isLoading, setIsLoading] = useState(true)
   const fetchProducts = () => {
     axios
-      .get(`https://data-adidas.herokuapp.com/api/products?search=${search}`)
+      .get(`${process.env.PRODUCTS_URL}?search=${search}`)
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   };
