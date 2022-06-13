@@ -15,7 +15,7 @@ const CarouselProducts = ({ sort }) => {
 
   const fetchProducts = () => {
     axios
-      .get(`https://data-adidas.herokuapp.com/api/products?${sort}=true`)
+      .get(`${process.env.PRODUCTS_URL}?${sort}=true`)
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   };
