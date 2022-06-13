@@ -22,7 +22,7 @@ const Login = ({message}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://data-adidas.herokuapp.com/api/auth";
+      const url = process.env.AUTH_URL;
       const { data: res } = await axios.post(url, data);
       localStorage.setItem("user", JSON.stringify(res.data));
       navigate("/");
