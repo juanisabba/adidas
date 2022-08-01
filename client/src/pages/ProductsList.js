@@ -19,7 +19,7 @@ const Products = (props) => {
 
   const fetchProducts = () => {
     axios
-      .get(`https://data-adidas.herokuapp.com/api/products?category=${cat}`)
+      .get(`${process.env.PRODUCTS_URL}?category=${cat}`)
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   };
